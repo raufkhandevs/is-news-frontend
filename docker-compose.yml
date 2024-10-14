@@ -1,0 +1,15 @@
+services:
+  frontend:
+    build:
+      context: .
+    container_name: is_new_frontend
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./:/app
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
